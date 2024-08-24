@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <div>
+      <input type="number" [(ngModel)]="input1" placeholder="Primer valor">
+    </div>
+    <div>
+      <input type="number" [(ngModel)]="input2" placeholder="Segundo valor">
+    </div>
+    <div>
+      <button (click)="performOperation('+')">+</button>
+      <button (click)="performOperation('-')">-</button>
+      <button (click)="performOperation('*')">*</button>
+      <button (click)="performOperation('/')">/</button>
+      <button (click)="performOperation('^')">^</button>
+      <button (click)="performOperation('raiz')">raiz</button>
+    </div>
+    <app-result-display [resultado]="resultado"></app-result-display>
+</body>
+</html>
